@@ -1,0 +1,40 @@
+base_sword:
+  active_spell: base_attack
+  alternate_spell: base_attack_strong
+  icon: wooden_sword
+  bound: false
+  undroppable: false
+  keep: false
+  uses: 50
+  name: Wooden Club
+  left_click: cast
+  right_click: alt_cast
+  stack: true
+  attributes:
+    weight: 0.5
+  item_attributes:
+    generic_attack_damage: -10
+    generic_attack_speed: 10
+
+sword_stone:
+  uses: 100
+  inherit: base_sword
+  name: Stone Club
+  icon: stone_sword
+  active_spell: base_attack
+  alternate_spell: base_attack_strong
+  attributes:
+    weight: 1
+    strength: 2
+
+sword_iron:
+  uses: 200
+  inherit: base_sword
+  name: Sword
+  icon: iron_sword
+  active_spell: base_sweep
+  alternate_spell: base_sweep_strong
+  attributes:
+    weight: 0.8
+    strength: 1.5
+    agility: 1.5

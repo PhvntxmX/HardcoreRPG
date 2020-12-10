@@ -1,0 +1,16 @@
+default:
+  inherit: base
+  locked: true
+  mana_regeneration: "0.5 * wisdom"
+  mana_max: "70 + 10 * intelligence"
+  mana: 100
+  entity_attributes:
+    generic_max_health:
+      value: "constitution * 2"
+      operation: base
+    generic_movement_speed:
+      value: "0.1 - 0.01 * weight"
+      operation: base
+    generic_knockback_resistance:
+      value: "0.01 * (weight + constitution)"
+      operation: base

@@ -1,0 +1,11 @@
+fire_arrow:
+  locked: true
+  output: fire_arrow
+  output_type: item
+
+  materials:
+    o: torch
+    i: arrow
+
+  row_1: o
+  row_2: i

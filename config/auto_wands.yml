@@ -1,0 +1,4 @@
+auto_wands:
+  wooden_sword: base_sword
+  stone_sword: sword_stone
+  iron_sword: sword_iron

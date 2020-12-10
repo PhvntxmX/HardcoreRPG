@@ -1,0 +1,5 @@
+custom_currency:
+ money:
+  max: 10000
+  default: 10
+  icon: skull:http://textures.minecraft.net/texture/137dcfb66a61c529f2a128aeef93c25f9d0b0439b59fb199d2b04acfe0b85aac

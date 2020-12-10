@@ -1,0 +1,74 @@
+base_attack:
+  name: Attack
+  cast_on_no_target: false
+  description: Damage Your Target
+  icon: iron_sword
+  actions:
+    cast:
+    - class: Damage
+  effects:
+    cast:
+    - location: target
+      particle: sweep_attack
+    - sound: entity_player_attack_sweep
+  headshot_parameters:
+    damage_multiplier: 2
+  parameters:
+    range: 3
+    target: other
+    hitbox: true
+    damage: 2 + strength
+    damage_type: blunt
+    cooldown_mage: 1500 + 500 * weight
+
+base_attack_strong:
+  inherit: base_attack
+  parameters:
+    damage: 3 + 1.5 * strength
+    cooldown_mage: 2000 + 750 * weight
+
+base_sweep:
+  inherit: base_attack
+  actions:
+    cast:
+    - class: ConeOfEffect
+      actions:
+      - class: Damage
+  effects:
+    cast:
+    - location: targets
+      particle: sweep_attack
+    - sound: entity_player_attack_sweep
+  parameters:
+    fov: 0.8
+    damage: 2 + strength + agility
+    damage_type: entity_sweep_attack
+    cooldown_mage: 1000 + 500 * weight
+    range: 3
+    hitbox: false
+
+base_sweep_strong:
+  inherit: base_attack_strong
+  actions:
+    cast:
+    - class: ConeOfEffect
+      actions:
+      - class: Damage
+  effects:
+    cast:
+    - location: targets
+      particle: sweep_attack
+    - sound: entity_player_attack_sweep
+  parameters:
+    fov: 0.8
+    damage: 3 + 1.5 * (strength + agility)
+    damage_type: entity_sweep_attack
+    cooldown_mage: 1000 + 750 * weight
+    range: 3
+    hitbox: false
+
+base_piercing:
+  inherit: base_attack
+  parameters:
+    range: 4
+    damage_type: piercing

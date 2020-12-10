@@ -1,0 +1,23 @@
+healthbar_text:
+  icon: apple{CustomModelData:18001}
+  icon_disabled: apple{CustomModelData:18002}
+  name: Health Bar
+  description: "Shows current amount of health of targeted mob/player"
+  toggleable: false
+  passive: true
+  triggers:
+    - trigger: damage_dealt
+  actions:
+    cast:
+    - class: Delay
+    - class: ChangeContext
+      swap_source_and_target: true
+      use_target_mage: true
+      actions:
+      - class: Message
+  parameters:
+    delay: 150
+    target: damage_target
+    message_type: action_bar
+    message_target: true
+    message: "@p's Health: &c@health&r&f/&4@health_max &f(&b-$damage&f)"

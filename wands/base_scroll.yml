@@ -1,0 +1,11 @@
+base_scroll:
+  active_spell: addspell
+  icon: flower_banner_pattern
+  uses: 1.0
+  right_click: cast
+  spells:
+  - addspell
+  version: 7
+  spell_inventory:
+    addspell: 0
+  name: Spell Scroll

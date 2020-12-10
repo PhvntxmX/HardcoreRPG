@@ -1,0 +1,86 @@
+magic_arrow:
+  icon: prismarine_shard{CustomModelData:18001}
+  icon_disabled: prismarine_shard{CustomModelData:18002}
+  earns_sp: 1
+  actions:
+    cast:
+    - class: CustomProjectile
+      actions:
+      - class: Damage
+  effects:
+    cast:
+      - location: origin
+        source_location: wand
+        particle: flash
+        sound: magic.zap_crack
+      - location: origin
+        particle: redstone
+        color: "00bfff"
+        particle_count: 15
+        particle_offset_x: 0.5
+        particle_offset_y: 0.5
+        particle_offset_z: 0.5
+        sound: block_beacon_power_select
+        sound_pitch: 0.8
+        sound_volume: 0.8
+    hit:
+      - location: target
+        sound: block_beacon_power_select
+        sound_volume: 0.5
+        sound_pitch: 1.3
+        particle: redstone
+        particle_count: 10
+        particle_offset_x: 1
+        particle_offset_y: 1
+        particle_offset_z: 1
+      - location: target
+        sound: block_conduit_deactivate
+        sound_pitch: 1.3
+        sound_volume: 0.5
+        particle: fireworks_spark
+        particle_data: 0.15
+        particle_count: 5
+        particle_offset_x: 1
+        particle_offset_y: 1
+        particle_offset_z: 1
+      - location: target
+        particle: flash
+    tick:
+      - location: target
+        particle: redstone
+        particle_size: 1.5
+        particle_count: 5
+        particle_offset_x: 0.05
+        particle_offset_y: 0.05
+        particle_offset_z: 0.05
+        color: "00bfff"
+  headshot_parameters:
+    damage_multiplier: 2
+  parameters:
+    target: other
+    damage: intelligence
+    hitbox: true
+    cooldown: 3300 - 100 * wisdom
+    range: 32
+    velocity: 100
+    damage_type: magic
+  costs:
+    mana: 10
+
+magic_arrow_large:
+  inherit: magic_arrow
+  effects:
+    tick:
+      - location: target
+        particle: redstone
+        particle_size: 3
+        particle_count: 5
+        particle_offset_x: 0.1
+        particle_offset_y: 0.1
+        particle_offset_z: 0.1
+        color: "00bfff"
+  parameters:
+    damage: 2 * intelligence
+    cooldown: 3300 - 100 * wisdom
+  costs:
+    mana: 20
