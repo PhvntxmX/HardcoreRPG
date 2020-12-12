@@ -8,4 +8,6 @@ base_scroll:
   version: 7
   spell_inventory:
     addspell: 0
-  name: Spell Scroll
+  name: Свиток заклинания
+  creator_id: 5aeb41d1-bb6e-36bb-a1e9-87da40ca4222
+  creator: Sosiska

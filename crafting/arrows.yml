@@ -9,3 +9,75 @@ fire_arrow:
 
   row_1: o
   row_2: i
+
+chainmail_armor:
+  locked: true
+  output: chestplate_chainmail
+  output_type: wand
+
+  materials:
+    i: chain
+
+  row_1: "i i"
+  row_2: "iii"
+  row_3: "iii"
+
+chainmail_helmet:
+  locked: true
+  output: helmet_chainmail
+  output_type: wand
+
+  materials:
+    i: chain
+
+  row_1: "iii"
+  row_2: "i i"
+  row_3: ""
+
+chainmail_helmet1:
+  locked: true
+  output: helmet_chainmail
+  output_type: wand
+
+  materials:
+    i: chain
+
+  row_1: ""
+  row_2: "iii"
+  row_3: "i i"
+
+chainmail_leggings:
+  locked: true
+  output: leggings_chainmail
+  output_type: wand
+
+  materials:
+    i: chain
+
+  row_1: "iii"
+  row_2: "i i"
+  row_3: "i i"
+
+chainmail_boots:
+  locked: true
+  output: boots_chainmail
+  output_type: wand
+
+  materials:
+    i: chain
+
+  row_1: "i i"
+  row_2: "i i"
+  row_3: ""
+
+chainmail_boots1:
+  locked: true
+  output: boots_chainmail
+  output_type: wand
+
+  materials:
+    i: chain
+
+  row_1: ""
+  row_2: "i i"
+  row_3: "i i"

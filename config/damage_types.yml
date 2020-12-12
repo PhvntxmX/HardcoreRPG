@@ -22,6 +22,8 @@
 #
 # The "overall" type is special, it applies to the "overall" protection which will be used for any type of damage.
 #
+use_magic_damage: true
+
 damage_types:
   overall:
     max_reduction: 1.0
@@ -104,14 +106,6 @@ damage_types:
     max_strength: 5
     max_weakness: 10
   frost:
-    max_reduction: 1.0
-    max_strength: 5
-    max_weakness: 10
-  piercing:
-    max_reduction: 1.0
-    max_strength: 5
-    max_weakness: 10
-  blunt:
     max_reduction: 1.0
     max_strength: 5
     max_weakness: 10

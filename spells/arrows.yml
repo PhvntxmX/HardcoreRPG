@@ -3,21 +3,26 @@ fire_arrow:
   actions:
     cast:
     - class: Projectile
-      actions:
-      - class: Ignite
   effects:
     cast:
       - location: origin
         sound: entity_arrow_shoot
     hit:
       - location: target
-        sound: magic.ignite
-        sound_pitch: 0.8
+        sound: magic.burn
+        sound_volume: 0.8
+        particle: flame
+        particle_count: 10
+        particle_offset_x: 0.5
+        particle_offset_y: 0.5
+        particle_offset_z: 0.5
   parameters:
     target: none
-    projectile: Arrow
+    projectile: TippedArrow
     fire: true
-    tick_increase: 500
-    speed: 3 ^ bowpull
+    entity_undo: false
+    tick_increase: 0
+    pickup: allowed
+    speed: 2.8 * bowpull
     spread: "1.3 - bowpull"
     arrow_damage: "bowpull"

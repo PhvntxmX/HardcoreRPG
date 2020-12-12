@@ -1,3 +1,7 @@
+default_mage_class: ""
+
+prevent_wand_melee_damage: false
+
 custom_currency:
  money:
   max: 10000

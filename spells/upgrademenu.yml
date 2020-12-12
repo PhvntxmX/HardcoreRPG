@@ -1,0 +1,74 @@
+upgrademenu:
+  passive: true
+  triggers:
+  - trigger: right_click
+  actions:
+    cast:
+      - class: Delay
+        delay: 300
+      - class: CheckBlock
+        allowed: smithing_table
+        actions:
+        - class: ChangeContext
+          target_caster: true
+          actions:
+          - class: InventoryClose
+          - class: Selector
+  parameters:
+    target: any
+    options:
+    - cast_for_tags:
+        weapon: weaponupgrade
+        armor: armorupgrade
+        wand: wandupgrade
+      icon: netherite_ingot
+      requirements:
+      - holding_wand: true
+
+weaponupgrade:
+ actions:
+   cast:
+   - class: Selector
+ parameters:
+   apply_to_wand: true
+   auto_close: false
+   options:
+   - cost_type: gold_ingot
+     cost: 1
+     icon: gold_ingot
+     cast_spell: add_gold
+     requirements:
+       - wand_properties:
+         - property: "attributes.weight"
+           min: 2
+   - cost_type: diamond
+     cost: 1
+     icon: diamond
+     cast_spell: add_diamond
+     requirements:
+       - wand_properties:
+         - property: "enchantments.DAMAGE_ALL"
+           max: 10
+
+add_gold:
+  actions:
+    cast:
+    - class: ModifyProperties
+  parameters:
+    bypass_undo: true
+    target: self
+    modify_target: "wand"
+    modify:
+    - property: damage
+      value: "x + 20"
+    - property: "attributes.weight"
+      value: "x - 1"
+
+add_diamond:
+ inherit: add_gold
+ parameters:
+    modify:
+    - property: damage
+      value: "x - 100"
+    - property: "enchantments.DAMAGE_ALL"
+      value: "x + 1"

@@ -1,3 +1,4 @@
 example: ''
-examples: []
+examples:
+- survival
 add_examples: []

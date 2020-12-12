@@ -1,0 +1,91 @@
+chestplate_leather:
+  stack: true
+  icon: leather_chestplate
+  bound: false
+  undroppable: false
+  keep: false
+  name: Leather Armor
+  attributes:
+    weight: 1
+  passive: true
+  tags:
+  - armor
+  item_attributes:
+    generic_armor: 0
+
+chestplate_chainmail:
+  inherit: chestplate_leather
+  name: Chainmail Armor
+  icon: chainmail_chestplate
+  attributes:
+    weight: 2
+
+chestplate_iron:
+  inherit: chestplate_leather
+  name: Iron Armor
+  icon: iron_chestplate
+  attributes:
+    weight: 3
+
+helmet_leather:
+  inherit: chestplate_leather
+  name: Leather Helmet
+  icon: leather_helmet
+  attributes:
+    weight: 1
+
+helmet_chainmail:
+  inherit: chestplate_leather
+  name: Chainmail Helmet
+  icon: chainmail_helmet
+  attributes:
+    weight: 2
+
+helmet_iron:
+  inherit: chestplate_leather
+  name: Iron Helmet
+  icon: iron_helmet
+  attributes:
+    weight: 3
+
+leggings_leather:
+  inherit: chestplate_leather
+  name: Leather Leggings
+  icon: leather_leggings
+  attributes:
+    weight: 1
+
+leggings_chainmail:
+  inherit: chestplate_leather
+  name: Chainmail Leggings
+  icon: chainmail_leggings
+  attributes:
+    weight: 2
+
+leggings_iron:
+  inherit: chestplate_leather
+  name: Iron Leggings
+  icon: iron_leggings
+  attributes:
+    weight: 3
+
+boots_leather:
+  inherit: chestplate_leather
+  name: Leather Boots
+  icon: leather_boots
+  attributes:
+    weight: 1
+
+boots_chainmail:
+  inherit: chestplate_leather
+  name: Chainmail Boots
+  icon: chainmail_boots
+  attributes:
+    weight: 2
+
+boots_iron:
+  inherit: chestplate_leather
+  name: Iron Boots
+  icon: iron_boots
+  attributes:
+    weight: 3
